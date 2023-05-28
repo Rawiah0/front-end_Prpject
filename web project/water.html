@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTE-8">
+    <meta charset="utf-8" />
+    <title>Daily Water Intake</title>
+  
+    <style type="text/css">
+
+      
+        body { text-align: center;
+          background: linear-gradient(45deg, #5079ac, rgb(148, 182, 202));
+        
+        
+        
+        
+        }
+
+#app-container {
+  width: 40%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#input-form {
+  display: inline-block;
+  column-width: 100%;
+  background-image: url(w1.jpeg);
+  background-size: cover;
+  color:white;
+  border: white solid 3px;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.section {
+  display: inline-block;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.input-text {
+  color: rgb(144, 174, 193);
+  font-size: 1.2rem;
+  padding: 5px;
+  width: 10%;
+  margin-left: 15px;
+  text-align: center;
+
+}
+
+#submit-btn {
+ 
+  padding: 10px;
+  background-color: rgb(144, 174, 193);
+  color: rgb(19, 11, 11);
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+
+
+#results {
+  background : white;
+  background-size: cover;
+  color: black;
+  border: white solid 3px;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="app-container">
+      <form id="input-form" onsubmit="return calcResults()">
+        <div class="section">
+          <label for="weight"><h2>.فضلاً ادخل الوزن</h2></label>
+          <input type="number" id="weight" class="input-text" name="weight" min='0' value='0'>
+        </div>
+        <div class="section">
+          <label for="exercise-mins"><h2>كم من الدقائق تتمرن في اليوم؟ </h2></label>
+          <input type="number" id="exercise-mins" class="input-text" name="exercise" min='0' value='0'>
+        </div>
+        <button type="submit" id="submit-btn">احسب احتياج الماء</button>
+      </form>
+      <p id="results"></p>
+    </div>
+  </body>
+</html>
+<script>
+    const calcResults = () => {
+  const weight = document.getElementById('weight').value;
+  const exercise = document.getElementById('exercise-mins').value;
+  const res = Math.round(((weight * (2 / 3)) + (12 * (exercise / 30))) / 8);
+  document.getElementById('results').innerHTML = 'عليك شرب ' + res.toString() + '.اكواب من الماء في اليوم'
+  return false;
+}
+    </script>

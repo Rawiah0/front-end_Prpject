@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    direction: rtl;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    /* text-align: center; */
+}
+
+body{
+    padding: 0%;
+    margin: 0%;  
+    /* margin: 5%; */
+    background: rgba(211, 211, 211, 0.203);
+}
+
+.container{
+    background: white; 
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    box-shadow: 4px 4px 10px lightgrey;
+    position: fixed;
+    width: calc(100%);
+    top: 0;
+}
+
+.under-tab-header{
+    padding: 6rem 2rem 0;
+}
+.cards{
+    background: white; 
+    box-shadow: 4px 4px 10px rgb(211, 211, 211);
+    display: flex;
+    padding: 1rem;
+    border-radius: 5rem;
+    display: grid;
+    grid-template-columns: repeat(7, 2fr);
+    grid-gap: 1rem;
+    margin: 1rem;
+}
+
+.cards li{
+    display: flex;
+    justify-content: center;
+    background: rgb(225, 247, 246);
+    padding: 15%;
+    border-radius: 1rem;
+}
+
+.cards li:hover{
+    border: 2px solid lightseagreen;
+    color: lightseagreen;
+    cursor: pointer;
+    /* font-weight: normal; */
+    /* background: lightseagreen; */
+}
+
+.cards li.active{
+    background: lightseagreen;
+    color: lightgray;
+    border: 2px solid lightgray;
+
+}
+ul{
+    padding: 0%;
+    margin: 0%;  
+}
+
+.navbar .brand{
+    float: right;
+    /* width: 80%; */
+}
+
+.navbar .links{
+    float: left;
+    padding-left: 10%;
+    /* width: 50%;  */
+    /* background-color: antiquewhite; */
+}
+
+.navbar .links li{
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.navbar .links li a:hover{
+    color: lightseagreen;
+    border-bottom: 2.5px solid lightcoral;
+    font-weight: normal;
+}
+
+/* instead of overflow: hidden; in .navbar*/
+.clearfix{
+    clear: both;
+}
+
+.days{
+    /* background: white; 
+    margin: 2rem 10rem;
+    padding: 1rem;
+    box-shadow: 1px 1px 15px rgb(211, 211, 211);
+    border-radius: 1rem;*/
+    text-align: center; 
+    background: rgba(211, 211, 211, 0.559); 
+    border: 2px solid lightseagreen;
+    box-shadow: 4px 4px 10px rgb(211, 211, 211);
+    padding: 1rem;
+    border-radius: 1rem;
+    display:grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-gap: 0rem;
+    margin: 0 2rem;
+}
+
+.vid-dis{
+    display:flex;
+    background: rgb(225, 247, 246);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 15%;
+    /* width: fit-content; */
+    
+}
+
+p{
+    font-weight: normal;
+    padding: 1rem;
+}
+
+iframe{
+    border-radius: 1rem;
+}
+
+.days > div:not(:first-child){
+    display: none;
+}
+

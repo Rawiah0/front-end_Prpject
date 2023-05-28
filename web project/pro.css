@@ -1,0 +1,119 @@
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #55608f);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url(foo.jpeg);
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	/* overflow: hidden; */
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.2);
+	color:black;
+	text-align: center;
+}
+
+th {
+	text-align: center;
+}
+
+thead th {
+	background-color: #55608f;
+}
+
+tbody tr:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+td {
+	position: relative;
+}
+
+td:hover:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -9999px;
+	bottom: -9999px;
+	background-color: rgba(255, 255, 255, 0.2);
+	z-index: -1;
+}  
+
+h1{
+text-align: center;
+margin-top: 150px;
+}
+
+
+.meal{
+
+    text-align: center;
+    word-spacing: 50rem;
+    letter-spacing: 3px;
+	color: black;
+}
+
+button {
+    background-color: #55608f; /* لون الزر */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 48px;
+    cursor: pointer;
+    font: inherit;
+    margin-left: 530px;
+
+}
+
+button:hover {
+    background-color: rgb(85, 149, 118); /* تعيين لون مختلف عند تحويل المؤشر فوق الزر */
+}
+
+
+.form__field {
+    width: 260px;
+    height: 2px;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+    /* margin-top: 50px;
+    margin-left: 150px; */
+}
+
+.form__field{
+
+margin-top: 400px;
+/* margin-left: 100px; */
+
+}
+
